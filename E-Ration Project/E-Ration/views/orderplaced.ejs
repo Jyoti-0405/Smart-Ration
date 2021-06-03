@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	    <!-- jQuery library -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	    <!-- Popper JS -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	    <!-- Latest compiled JavaScript -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	    <script src="https://kit.fontawesome.com/4bd347a694.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            .my-background{
+                background: #3EA99F;
+            }
+            html, body{
+                height: 100%;
+                overflow: hidden;
+            }
+            .my-relative{
+                position: relative;
+            }
+            .my-vertical-center{
+                top: -30%;
+                transform: translateY(30%);
+            }
+            .my-horzontial-center{
+                left: -45%;
+                transform: translateX(45%);
+            }
+            .my-title{
+                font-size : 25px;
+            }
+            .my-font{
+                font-family: Trebuchet MS;
+            }
+            .my-product > *{
+                font-family: Tahoma;
+                font-size: 16px;
+            }
+            .my-wrongicon:hover{
+                font-size: 18px;
+            }
+            .fa-times{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class = "my-relative">
+        <nav class="fh5co-nav" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-2">
+                        <div id="fh5co-logo"><a href="index.html">Smart Ration</a></div>
+                    </div>
+                    <div class="col-md-9 col-xs-4 text-right hidden-xs menu-2">
+                        <ul>
+                            <li class = "mr-5"><%=name%></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        <div class = "container-fluid h-100 my-background pt-5">
+            <div class = "d-flex justify-content-center align-content-center my-horzontial-center my-vertical-center bg-white shadow h-75 w-50 rounded">
+                <div class = "align-self-center mr-3">
+                    <div class = "fas fa-check text-success mx-auto" style = "font-size: 50px;"></div>
+                </div>
+                <div class = "text-success align-self-center my-font"  style = "font-size: 30px;">Order Successfully Placed</div>
+                <div class = "fixed-bottom w-100 bg-light pt-2 pb-2 text-center my-font">
+                    <a href = "/home"><div class = "fas fa-arrow-left mr-1"></div>Back to Home</a>
+                </div>
+            </div>  
+           
+        </div>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<div id="fh5co-started">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2">
+					<h2 class=" text-center">MY CART</h2>
+                    <div class="col-md-5">
+                        <div class = "text-white" id = "ricecart">Raw Rice</div></br>
+                        <div class = "text-white" id = "ricehalfboiledcart">Half boiled rice</div></br>
+                        <div class = "text-white">Wheat</div></br>
+                        <div class = "text-white">Sugar</div></br>
+                        <div class = "text-white">Salt</div></br>
+                        <div class = "text-white">oil</div></br>
+						<div class = "text-white">Tea</div></br>
+						<div class = "text-white">Urad Dall</div></br>
+						<div class = "text-white">Toor Dall</div></br>
+						<h3 class = "text-light border-top pt-3 pb-3 border-bottom text-center">TOTAL</h3>
+
+                    </div>
+                    <div class="col-md-5 col-md-offset-2 text-right">
+                        <div class = "text-white d-flex ml-3 justify-content-center" id = "ricecartprice">
+							<div class = "mr-4">RS: 0</div>
+							<div class = "fas fa-check text-success align-self-center mr-4"  id = "ricecartpricesuccess" onclick = "addtocart('rice')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "ricecartpricedanger" onclick = "removeproduct('rice')"></div>
+						</div></br>
+                        <div class = "text-white d-flex ml-3 justify-content-center" id = "halfboiledricecartprice">
+							<div class = "mr-4">RS: 0</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "halfboiledricecartpricesuccess" onclick = "addtocart('halfboiledrice')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "halfboiledricecartpricedanger" onclick = "removeproduct('halfboiledrice')"></div>
+						</div></br>
+                        <div class = "text-white d-flex ml-3 justify-content-center" id = "wheatcartprice">
+							<div class = "mr-4">RS: 0</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "wheatcartpricesuccess" onclick = "addtocart('wheat')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "wheatcartpricedanger" onclick = "removeproduct('wheat')"></div>
+						</div></br>
+                        <div class = "text-white d-flex ml-3 justify-content-center" id = "sugarcartprice">
+							<div class = "mr-4">RS: 50</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "sugarcartpricesuccess" onclick = "addtocart('sugar')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "sugarcartpricedanger" onclick = "removeproduct('sugar')" ></div>
+						</div></br>
+                        <div class = "text-white d-flex ml-3 justify-content-center" id = "saltcartprice">
+							<div class = "mr-4">RS: 10</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "saltcartpricesuccess" onclick = "addtocart('salt')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "saltcartpricedanger" onclick = "removeproduct('salt')"></div>
+						</div></br>
+                        <div class = "text-white d-flex ml-3 justify-content-center" id = "oilcartprice" >
+							<div class = "mr-4">RS: 25</div>
+							<div class = "fas fa-check text-success align-self-center mr-4"  id = "oilcartpricesuccess" onclick = "addtocart('oil')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white"  id = "oilcartpricedanger" onclick = "removeproduct('oil')"></div>
+						</div>
+						</br>
+						<div class = "text-white d-flex ml-3 justify-content-center" id = "teacartprice">
+							<div class = "mr-4">RS: 20</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "teacartpricesuccess" onclick = "addtocart('tea')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "teacartpricedanger" onclick = "removeproduct('tea')"></div>
+						</div></br>
+						<div class = "text-white d-flex ml-3 justify-content-center" id = "uraddallcartprice">
+							<div class = "mr-4">RS: 30</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "uraddallcartpricesuccess" onclick = "addtocart('uraddall')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "uraddallcartpricedanger" onclick = "removeproduct('uraddall')"></div>
+						</div></br>
+						<div class = "text-white d-flex ml-3 justify-content-center" id = "toordallcartprice">
+							<div class = "mr-4">RS: 30</div>
+							<div class = "fas fa-check text-success align-self-center mr-4" id = "toordallcartpricesuccess" onclick = "addtocart('toordall')"></div>
+							<div class = "fas fa-times text-danger align-self-center mr-4 rounded-circle p-2 bg-white" id = "toordallcartpricedanger" onclick = "removeproduct('toordall')"></div>
+						</div><br>
+						<h3 class = "text-light border-top pt-3 pb-3 border-bottom text-center" id = "totalamount">Rs: 0</h3>
+                    </div>
+                          
+				</div>
+				
+			</div>
+			
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-4">
+					<form class="form-inline" method = "POST" action = "/pay">
+						<!--<div class="col-md-6 col-sm-6">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input type="email" class="form-control" id="email" placeholder="Email">
+							</div>
+						</div>-->
+						<input name = "totalamnt" class = "d-none" id = "inputtotalamount"/>
+						<div class="col-md-6 col-sm-6 mt-5">
+								<button type="submit" class="btn btn-default btn-block ">Proceed to BUY</a></button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

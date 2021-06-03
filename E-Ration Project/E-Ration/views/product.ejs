@@ -1,0 +1,451 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shop &mdash; Free Website Template, Free HTML5 Template by gettemplates.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by gettemplates.co" />
+	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="gettemplates.co" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/4bd347a694.js" crossorigin="anonymous"></script>
+
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i" rel="stylesheet"> -->
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<style>
+		.addedtocartmsg{
+			font-size : 25px;
+		}
+	</style>
+
+	</head>
+	<body>
+		
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+	<nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-2">
+					<div id="fh5co-logo"><a href="index.html">Smart Ration.</a></div>
+				</div>
+				<!--<div class="col-md-6 col-xs-6 text-center menu-1">
+					<ul>
+						<li class="has-dropdown">
+							<a href="product.html">Shop</a>
+							<ul class="dropdown">
+								<li><a/a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">About</a></li>
+						<li class="has-dropdown">
+							<a href="services.html">Services</a>
+							<ul class="dropdown">
+								<li><a href="#">Web Design</a></li>
+								<li><a href="#">eCommerce</a></li>
+								<li><a href="#">Branding</a></li>
+								<li><a href="#">API</a></li>
+							</ul>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>-->
+				<div class="col-md-9 col-xs-4 text-right hidden-xs menu-2">
+					<ul>
+						<li class = "mr-5"><%=name%></li>
+						<li class="shopping-cart"><a href="#" class="cart"><span><small>0</small><i class="icon-shopping-cart"></i></span></a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(image/rat.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>One Nation One Ration.</h1>
+							<h2>The online smart ration for smart India.</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div id="fh5co-product">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<!--<span>Ration</span>-->
+					<h2>ration Products.</h2>
+					<p>Here your products. Add everthing in your cart and buy it.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 text-center animate-box" id = "rice">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/raw_rice.jpg);">
+							<div class="inner" id = "carticonrice">
+								<p>
+									<a class="icon" onclick = "addtocart('rice')"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgrice">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>Raw rice (பச்சரிசி)</a></h3>
+							<span class="price">10 KG - FREE</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box" id = "halfboiledrice">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/halfboiled_rice.jpg);">
+							<div class="inner" id = "carticonhalfboiledrice">
+								<p>
+									<a class="icon" onclick = "addtocart('halfboiledrice')"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsghalfboiledrice">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>Half boiled rice (புழுங்கல் அரிசி)</a></h3>
+							<span class="price">5 KG - FREE</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/wheat.jpg);">
+							<div class="inner" id = "carticonwheat">
+								<p>
+									<a class="icon" onclick = "addtocart('wheat')" id = "wheataddtocart"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgwheat">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>Wheat (கோதுமை)</a></h3>
+							<span class="price">5 KG - FREE</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/sugar.jpg);">
+							<div class="inner" id = "carticonsugar">
+								<p>
+									<a class="icon" onclick = "addtocart('sugar')"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgsugar">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>Sugar(சர்க்கரை)</a></h3>
+							<span class="price">2 KG - RS: 50</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/salt.jpg);">
+							<div class="inner" id = "carticonsalt">
+								<p>
+									<a class="icon" onclick = "addtocart('salt')" id = "sugaraddtocart"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgsalt">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>Salt(உப்பு)</a></h3>
+							<span class="price">1 pkt - RS: 10</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/tea.jpg);">
+							<div class="inner" id = "carticontea">
+								<p>
+									<a class="icon" onclick = "addtocart('tea')" id = "teaaddtocart"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgtea">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>tea(தேநீர்)</a></h3>
+							<span class="price">1 pkt - RS: 20</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/urad_dall.jpeg);">
+							<div class="inner" id = "carticonuraddall">
+								<p>
+									<a class="icon" onclick = "addtocart('uraddall')" id = "uraddalladdtocart"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsguraddall">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>Urad dall(உளுந்து)</a></h3>
+							<span class="price">1 KG - RS: 30</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(image/dhall.jpg);">
+							<div class="inner" id = "carticontoordall">
+								<p>
+									<a class="icon" onclick = "addtocart('toordall')" id = "toordalladdtocart"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgtoordall">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>TOOR DALL(துவரம் பருப்பு)</a></h3>
+							<span class="price">1 KG - RS: 30</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 text-center animate-box">
+					<div class="product">
+						<div class="product-grid" style="background-image:url(imagE/OIL.jpg);">
+							<div class="inner" id = "carticonoil">
+								<p>
+									<a class="icon" onclick = "addtocart('oil')" id = "oiladdtocart"><i class="icon-shopping-cart"></i></a>
+									<!--<a class="icon"><i class="icon-eye"></i></a>-->
+								</p>
+							</div>
+							<div class="d-none bg-light w-100 p-3 justify-content-center" style = "position: absolute;bottom: 0px" id = "addedtocartmsgoil">
+								<div class = "fas fa-check icon text-success addedtocartmsg align-self-center mr-3"></div>
+								<div class = "icon text-success addedtocartmsg align-self-center" >Added to Cart</div>
+							</div>
+						</div>
+						<div class="desc">
+							<h3><a>PALM OIL(பாமாயில்)</a></h3>
+							<span class="price">1 PKT - RS: 25</span>
+						</div>
+					</div>
+				</div>
+		</div>
+	</div>
+	<form method = "POST" action = "/addtocart">
+		<input class = "d-none" name = "items" id = "inputarray"/>
+		<div class="mx-auto w-25 mt-5 mb-5">
+			<button type="submit" class="btn btn-default btn-block p-4 text-white" style = "background: #3EA99F;">Go to Cart</a></button>
+		</div>
+	</form>
+	
+
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-3 fh5co-widget">
+					<h3>Smart Ratiom.</h3>
+					<p>One Nation One Ration.<br>Online smart ration for smart India.</p>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+                        <li><h4><b>Acts & Rules</b></h4></li>
+						<li><a href="#">NFSA Act 2013</a></li>
+						<li><a href="#">TN Food Security Rules 2017</a></li>
+						<li><a href="#">Essential Commodities Act</a></li>
+						<li><a href="#">Gazette Act 2019</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+                        <li><h4><b>Grievance Redressal</b></h4></li>
+						<li><a href="#">State Food Commission</a></li>
+						<li><a href="#">District Grievance Redressal Officers</a></li>
+						<li><a href="#">SMS Facilities</a></li>
+						<li><a href="#">Vigilance Committee</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-3 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+                        <li><h4><b>Vigilance Committee</b></h4></li>
+						<li><a href="#">Consumer Protection Department</a></li>
+						<li><a href="#">Tamil Nadu Civil Supplies Corporation</a></li>
+						<li><a href="#">Registrar of Co-operative Societies</a></li>
+						<li><a href="#">Election Commission</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; 2020 SMART RATION. All Rights Reserved.</small> 
+						<small class="block">Designed by <b>CEG MCA-SS(TEAM-III)</b></small>
+					</p>
+					<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="https://twitter.com/tnepds" target="_blank"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://tnpds.gov.in/home.xhtml" target="_blank"><i class="icon-facebook"></i></a></li>
+							<li><a href="mailto:support@tnpds.com" target="_blank"><i class="icon-mail"></i></a></li>
+						</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script>
+		var amnt = 0;
+		var rice = 0,halfboiledrice = 0,wheat = 0,sugar = 50, salt = 10,tea = 20,uraddall = 30,toordall = 30,oil = 25;
+		var cart = [];
+		$(document).ready(function(){
+			if(<%=rice%>){
+
+			}
+			else{
+				$("#rice").attr('style',"display: none");
+				$("#halfboiledrice").attr('style',"display: none");
+				$("#ricecart").attr('style',"display: none");
+				$("#ricehalfboiledcart").attr('style',"display: none");
+				$("#ricecartprice").attr('style',"display: none");
+				$("#ricehalfboiledcartprice").attr('style',"display: none");
+				
+			}
+		});
+
+		function addtocart(n){
+			$("#carticon"+n).addClass('d-none');
+			$("#addedtocartmsg"+n).removeClass('d-none');
+			$("#addedtocartmsg"+n).addClass('d-flex');
+			cart.push(n);
+			$("#inputarray").val(cart);
+			console.log($("#inputarray").val());
+		}
+
+		function removeproduct(n){
+			$("#carticon"+n).removeClass('d-none');
+			$("#addedtocartmsg"+n).removeClass('d-flex');
+			$("#addedtocartmsg"+n).addClass('d-none');
+			cart.pop(n);
+			$("#inputarray").val(cart);
+		}
+
+	</script>
+
+	</body>
+</html>
+

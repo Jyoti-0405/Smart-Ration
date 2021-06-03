@@ -1,0 +1,293 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	    <!-- jQuery library -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	    <!-- Popper JS -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	    <!-- Latest compiled JavaScript -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	    <script src="https://kit.fontawesome.com/4bd347a694.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            .my-background{
+                background: #3EA99F;
+            }
+            html, body{
+                height: 100%;
+                overflow: hidden;
+            }
+            .my-relative{
+                position: relative;
+            }
+            .my-vertical-center{
+                top: -10%;
+                transform: translateY(10%);
+            }
+            .my-horzontial-center{
+                left: -45%;
+                transform: translateX(45%);
+            }
+            .my-title{
+                font-size : 25px;
+            }
+            .my-font{
+                font-family: Trebuchet MS;
+            }
+            .my-product > *{
+                font-family: Tahoma;
+                font-size: 16px;
+            }
+            .my-wrongicon:hover{
+                font-size: 18px;
+            }
+            .fa-times{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body class = "my-relative">
+        <nav class="fh5co-nav" role="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-xs-2">
+                        <div id="fh5co-logo"><a href="index.html">Smart Ration</a></div>
+                    </div>
+                    <div class="col-md-9 col-xs-4 text-right hidden-xs menu-2">
+                        <ul>
+                            <li class = "mr-5"><%=name%></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        <div class = "container-fluid h-100 my-background">
+            <div class = "bg-light h-75 shadow w-75 mx-auto rounded my-vertical-center" >
+                <!--Title-->
+                <div class = "d-flex justify-content-between pl-4 pr-4 text-center text-dark my-font pt-3 pb-3 border-bottom shadow font-weight-bolder sticky-top" style = "z-index: 11">
+                    <div class = "my-title align-self-center">
+                        My Cart
+                    </div>
+                    <div class = "text-danger align-self-center d-none" id = "noitemmsg"> 
+                        No item in cart to proceed
+                    </div>
+                    <div class = "align-self-center">
+                        Total : ₹ 
+                        <div class = "d-inline" id = "totalamnttop">165</div>
+                    </div>
+                </div>
+
+                <!--Products-->
+                <div class = "product h-75 my-relative" style = "overflow-y: scroll;overflow-x: hidden;z-index: 1">
+                    <div class = "d-flex justify-content-between mt-2 my-product border-bottom pb-3 pt-3 ml-3 mr-3 pl-5 pr-5" id = "ricecart">
+                        <div class = "align-self-center" id = "ricename">Raw Rice</div>
+                        <div class = "d-flex ml-3 justify-content-between">
+                            <div class = "mr-4 align-self-center" id = "riceprice">₹ 0</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "ricecartpricedanger" onclick = "removeproduct('rice')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "ricecartpricesuccess" onclick = "addproduct('rice')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "halfboiledricecart">
+                        <div class = "align-self-center" id = "halfboiledricename">Half Boiled Rice</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id = "halfboiledriceprice">₹ 0</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "halfboiledricecartpricedanger" onclick = "removeproduct('halfboiledrice')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "halfboiledricecartpricesuccess" onclick = "addproduct('halfboiledrice')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "wheatcart">
+                        <div class = "align-self-center" id = "wheatname">Wheat</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id = "wheatprice">₹ 0</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "wheatcartpricedanger" onclick = "removeproduct('wheat')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "wheatcartpricesuccess" onclick = "addproduct('wheat')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "sugarcart">
+                        <div class = "align-self-center" id = "sugarname">Sugar</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id = "sugarprice">₹ 50</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "sugarcartpricedanger" onclick = "removeproduct('sugar')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "sugarcartpricesuccess" onclick = "addproduct('sugar')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "saltcart">
+                        <div class = "align-self-center" id = "saltname">Salt</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id = "saltprice">₹ 10</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "saltcartpricedanger" onclick = "removeproduct('salt')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "saltcartpricesuccess" onclick = "addproduct('salt')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "oilcart">
+                        <div class = "align-self-center" id = "oilname">Oil</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id ="oilprice">₹ 25</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "oilcartpricedanger" onclick = "removeproduct('oil')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "oilcartpricesuccess" onclick = "addproduct('oil')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "toordallcart">
+                        <div class = "align-self-center" id = "toordallname" >Toor Dall</div>
+                        <div class = "d-flex ml-3 justify-content-center" >
+                            <div class = "mr-4 align-self-center" id = "toordallprice">₹ 30</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "toordallcartpricedanger" onclick = "removeproduct('toordall')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "toordallcartpricesuccess" onclick = "addproduct('toordall')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "uraddallcart">
+                        <div class = "align-self-center" id = "uraddallname">Urad Dall</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id = "uraddallprice">₹ 30</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "uraddallcartpricedanger" onclick = "removeproduct('uraddall')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "uraddallcartpricesuccess" onclick = "addproduct('uraddall')"></div>
+                        </div>
+                    </div>
+                    <div class = "d-flex justify-content-between mt-4 my-product border-bottom pb-3 ml-3 mr-3 pl-5 pr-5" id = "teacart">
+                        <div class = "align-self-center" id = "teaname">Tea</div>
+                        <div class = "d-flex ml-3 justify-content-center">
+                            <div class = "mr-4 align-self-center" id = "teaprice">₹ 20</div>
+                            <div class = "fas fa-minus text-danger align-self-center mr-4 my-wrongicon" id = "teacartpricedanger" onclick = "removeproduct('tea')"></div>
+                            <div class = "fas fa-plus text-success align-self-center mr-4 my-wrongicon d-none text-decoration-none" id = "teacartpricesuccess" onclick = "addproduct('tea')"></div>
+                        </div>
+                    </div>
+                    
+                    <div class = "d-flex justify-content-between pb-1 pt-1 pl-4 pr-4 fixed-bottom bg-white shadow">
+                        <a class = "align-self-center my-font" href = "/home">
+                            <div class = 'fas fa-arrow-left mr-1'></div>
+                            Add more items
+                        </a>
+                        <form class = "m-0 p-0" method = "POST" action= "/pay" onsubmit="return checkcart()" id = "form">
+                            <input class = "d-none" name = "totalamnt" id = "totalamntinput">
+                            <button class = "btn my-background text-light align-self-center" id = "paybutton">
+                                Pay ₹ 
+                                <div class = "d-inline" id = "totalamntbutton">165</div>
+                            </button>
+                            <button class = "btn my-background text-light align-self-center d-none" id = "placeorderbutton">
+                                Place Order
+                            </button>
+                        </form>
+                        
+                    </div>
+
+                    <div class = "d-flex justify-content-center bg-light fixed-bottom">
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <script>
+            var total = 0;
+            var rice = 0,halfboiledrice = 0,wheat = 0,sugar = 50, salt = 10,tea = 20,uraddall = 30,toordall = 30,oil = 25;
+
+            function removeproduct(n){
+                var price = 0;
+                $("#"+n+"name").attr("style","text-decoration: line-through red solid");
+                $("#"+n+"price").attr("style","text-decoration: line-through red solid");
+                $("#"+n+"cartpricedanger").addClass("d-none");
+                $("#"+n+"cartpricesuccess").removeClass("d-none");
+                price = $("#"+n+"price").text().replace('₹ ', '');
+                if(total == '0'){
+                    total = 0;
+                }
+                total = total-price;
+                $("#totalamnttop").text(total);
+                $("#totalamntbutton").text(total);
+                $("#totalamntinput").val(total);
+                if(total == 0){
+                    $("#paybutton").addClass('d-none');
+                    $("#placeorderbutton").removeClass('d-none');
+                    $("#form").removeAttr("action");
+                    $("#form").removeAttr("method");
+                    $("#form").attr("action","/orderplaced");
+                    $("#form").attr("method","GET");
+                }
+                else{
+                    $("#paybutton").removeClass('d-none');
+                    $("#placeorderbutton").addClass('d-none');
+                    $("#form").removeAttr("action");
+                    $("#form").attr("action","/pay");
+                    $("#form").removeAttr("method");
+                    $("#form").attr("method","POST");
+                }
+            }
+
+            function addproduct(n){
+                $("#"+n+"name").removeAttr("style");
+                $("#"+n+"price").removeAttr("style");
+                $("#"+n+"cartpricedanger").removeClass("d-none");
+                $("#"+n+"cartpricesuccess").addClass("d-none");
+                price = $("#"+n+"price").text().replace('₹ ', '');
+                price = parseInt(price);
+                if(total == '0'){
+                    total = price;
+                    total = parseInt(total);
+                }
+                else{
+                    total = parseInt(total);
+                    total = total+price;
+                }
+                total = parseInt(total);
+                $("#totalamnttop").text(total);
+                $("#totalamntbutton").text(total);
+                $("#totalamntinput").val(total);
+                if(total == 0){
+                    $("#paybutton").addClass('d-none');
+                    $("#placeorderbutton").removeClass('d-none');
+                    $("#form").removeAttr("action");
+                    $("#form").removeAttr("method");
+                    $("#form").attr("action","/orderplaced");
+                    $("#form").attr("method","GET");
+                }
+                else{
+                    $("#paybutton").removeClass('d-none');
+                    $("#placeorderbutton").addClass('d-none');
+                    $("#form").removeAttr("action");
+                    $("#form").removeAttr("method");
+                    $("#form").attr("action","/pay");
+                    $("#form").attr("method","POST");
+                }
+            }
+
+            $(document).ready(function(){
+                var product = ['rice','halfboiledrice','wheat','sugar','salt','tea','uraddall','toordall','oil'];
+                var items = "<%=product%>";
+                var item = items.split(",");
+                for (i in item) {
+                    product = jQuery.grep(product, function(value) {
+                        return value != item[i];
+                    });
+                    total += window[item[i]];
+                    console.log(product);
+                }
+                for (i in product){
+                    $("#"+product[i]+"cart").removeClass('d-flex');
+                    $("#"+product[i]+"cart").addClass('d-none');
+                   //console.log("$(#"+product[i]+"cart");
+                }
+                $("#totalamnttop").text(total);
+                $("#totalamntbutton").text(total);
+                $("#totalamntinput").val(total);
+            });
+
+            function checkcart(){
+                if($(".fa-minus").is(":visible")){
+                    return true;
+                }
+                else{
+                    $("#noitemmsg").removeClass("d-none");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

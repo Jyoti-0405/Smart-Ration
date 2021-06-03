@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>smartration</title>
+        <link rel="stylesheet" type="text/css" href="/css/main.css"> 
+    </head>
+    <body>
+        <div class="headerlogo-nav">
+            <a href="index.html">.SMART RATION</a>
+        </div>
+        <div class="loginbox">
+        <img src='/image/smartration_icon1.png' class="login_icon1">
+            <h1>Login Here</h1>
+            <h5 class = "warningmsg"><%=message%></h1>
+           
+
+            <form method = "POST" action = "/login">
+                <p>Mobile Number</p>
+                <input type="text" name="mobile" placeholder="Enter mobile number" maxlength="10">
+            <!--OTP GENERATOR-->
+                <button id="otp" type = "button" onclick="myFunction()">Generate OTP</button>
+                
+                <div id="myDIV" hidden>
+                <p>OTP</p>
+                <input type="password" name="password" maxlength="6" placeholder="Enter OTP">
+                <input type="Submit" name="" value="Submit">
+                <br><a href="">resend OTP</a> 
+                </div>
+                <br><a href="">contact us</a> 
+
+            </form>
+        </div>
+
+        
+        
+        
+        <script src="/js/main.js"></script>
+        <script>
+            const url = new URL(window.location.href);
+            const params = url.searchParams
+            const wrongpass = params.get('wrongpassword');
+            const usernotfound = params.get('usernotfound');
+            if(wrongpass == 1){
+                var element = document.getElementById('wrongpassword');
+                element.style.display = "block";
+            }
+            if( usernotfound == 1){
+                var element = document.getElementById('usernotfounded');
+                element.style.display = "block";
+            }
+
+            function myFunction() {
+	            var x = document.getElementById("myDIV");
+	            if (x.style.display === "none") {
+	            x.style.display = "none";
+	            } else {
+	            x.style.display = "block";
+	            }
+	            var x = document.getElementById("otp");
+	            if (x.style.display === "none") {
+	                x.style.display = "block";
+	            } else {
+	                x.style.display = "none";
+	            }   
+            }
+        </script>
+    </body>
+</html>
+
+
+
